@@ -67,7 +67,20 @@ func main() {
 		fs.ServeHTTP(w, r)
 	}))
 
-	srv := &http.Server{Addr: cfg.Addr, Handler: mux, ReadHeaderTimeout: 10 * time.Second}
+	port := os.Getenv("PORT")
+if port == "" {
+    port = strings.TrimPrefix(cfg.Addr, ":")
+}
+
+if port == "" {
+    port = "8080"
+}
+
+srv := &http.Server{
+    Addr: ":" + port,
+    Handler: mux,
+    ReadHeaderTimeout: 10 * time.Second,
+}
 	go func() {
 		sig := make(chan os.Signal, 1)
 		signal.Notify(sig, os.Interrupt, syscall.SIGTERM)

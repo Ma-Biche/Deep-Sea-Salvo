@@ -2,7 +2,7 @@
   "addr": ":8080",
   "redeemCodes": {
     "admin": {
-      "god": true,
+      "god": false,
       "note": "Unlocks god mode (solo rooms only). Change this code!"
     },
     "kraken": {
