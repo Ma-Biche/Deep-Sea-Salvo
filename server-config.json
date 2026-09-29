@@ -1,0 +1,17 @@
+{
+  "addr": ":8080",
+  "redeemCodes": {
+    "admin": {
+      "god": true,
+      "note": "Unlocks god mode (solo rooms only). Change this code!"
+    },
+    "kraken": {
+      "coins": 2500,
+      "note": "Kraken bounty"
+    },
+    "welcome": {
+      "coins": 500,
+      "note": "Starter coins"
+    }
+  }
+}
