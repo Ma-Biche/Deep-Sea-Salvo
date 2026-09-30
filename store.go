@@ -136,7 +136,7 @@ func loadConfig(path string) Config {
 		Addr: ":8080",
 		RedeemCodes: map[string]RedeemReward{
 			"welcome": {Coins: 500, Note: "Starter coins"},
-			"kraken":  {Coins: 2500, Note: "Kraken bounty"},
+			"kraken":  {Coins: 10000, Note: "Kraken bounty"},
 			"admin":   {God: true, Note: "Unlocks god mode (solo rooms only). Change this code!"},
 		},
 	}
